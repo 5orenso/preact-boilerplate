@@ -45,10 +45,39 @@ $ npm install -g preact-cli
 ## Getting started
 
 1. Create your new widget repo or just create your folder.
-2. Copy the files you need from this repo: `npm run install -- --dir <my-new-widget-dir>`
+2. Copy the files you need from this repo: 
+```bash
+$ npm run install -- --dir <my-new-widget-dir>
+```
+3. Then jump into your new widget dir:
+```bash
+$ cd <my-new-widget-dir>
+```
+4. Install dependencies
+```bash
+$ npm install
+```
+5. Run the widget in dev mode:
+```bash
+$ npm run start
+// You can see your live widget here `http://localhost:56789/`
+```
 
+Now you are ready to start developing your groundbreaking new widget.
 
+A nice thing to have running while you are developing are ESlint:
+```bash
+$ npm run eslint-watch
+```
 
+And if you are an ACE-programmer you also have unit test running live:
+```bash
+$ npm run test-watch
+```
+
+-----
+
+# General Preact stuff
 
 ## Create a new widget
 
