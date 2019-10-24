@@ -1,7 +1,7 @@
 # Preact Boilerplate
-[![Build Status](https://travis-ci.org/5orenso/node-express-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/node-express-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/5orenso/node-express-boilerplate/badge.svg)](https://coveralls.io/r/5orenso/node-express-boilerplate)
-[![GitHub version](https://badge.fury.io/gh/5orenso%2Fnode-express-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fnode-express-boilerplate)
+[![Build Status](https://travis-ci.org/5orenso/preact-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/preact-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/5orenso/preact-boilerplate/badge.svg)](https://coveralls.io/r/5orenso/preact-boilerplate)
+[![GitHub version](https://badge.fury.io/gh/5orenso%2Fpreact-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fpreact-boilerplate)
 
 ## Yet another Node.js - Preact Boilerplate
 
@@ -84,23 +84,6 @@ $ npm run serve
 ```
 
 
-## SUPPORT FOR async and await
-
-npm install babel-plugin-transform-regenerator --save
-
-.babelrc
-{
-  "presets": ["preact-widget-scripts/babel"],
-  "plugins": [
-    ["transform-regenerator", {
-      "asyncGenerators": true,
-      "generators": true,
-      "async": true
-    }]
-  ]
-}
-
-
 ### Howto upgrade modules
 ```bash
 $ sudo npm install -g npm-check-updates
@@ -112,7 +95,7 @@ $ npm install --no-optional
 For transparency and insight into the release cycle, releases will be
 numbered with the follow format:
 
-<major>.<minor>.<patch>
+`<major>.<minor>.<patch>`
 
 And constructed with the following guidelines:
 
