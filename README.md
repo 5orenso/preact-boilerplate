@@ -1,4 +1,40 @@
 # Preact Boilerplate
+[![Build Status](https://travis-ci.org/5orenso/node-express-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/node-express-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/5orenso/node-express-boilerplate/badge.svg)](https://coveralls.io/r/5orenso/node-express-boilerplate)
+[![GitHub version](https://badge.fury.io/gh/5orenso%2Fnode-express-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fnode-express-boilerplate)
+
+## Yet another Node.js - Preact Boilerplate
+
+This time with a Bootstrap 4, Fontawesome, unit tests, integration tests, code coverage, continuous integration, code analysis, code style and a nice setup flow.
+
+Helper modules in use:
+
+__Bootstrap 4__
+
+Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system and extensive prebuilt components.
+
+__Fontawesome 5.8.1__
+
+__Professionally Designed + Pixel-Perfect__
+Each and every symbol is designed from scratch against guidelines and standards forged from years of experience of illustrating and designing icons. The result is a consistent look and feel that spans thousands of icons across three unique styles.
+
+__Jest__
+A browser JavaScript testing toolkit. Jest is used by Facebook to test all JavaScript code including React applications. One of Jest's philosophies is to provide an integrated "zero-configuration" experience.
+
+__ESLint__
+ESLint is a code style linter for programmatically enforcing your style guide.
+
+__Istanbul__
+A Javascript code coverage tool written in JS.
+
+__Travis__
+Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class support for many languages.
+
+__Coveralls.io__
+Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.
+
+__Retire__
+Scanner detecting the use of JavaScript libraries with known vulnerabilities.
 
 ## Before you start
 
@@ -9,6 +45,7 @@ https://github.com/developit/preact-cli
 $ npm install -g preact-cli
 ```
 
+## Getting started
 
 ## Create a new widget
 

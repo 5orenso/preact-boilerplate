@@ -1,13 +1,13 @@
-let poly = require("preact-cli/lib/lib/webpack/polyfills");
+// eslint-disable-next-line
+import habitat from 'preact-habitat';
 
-import { h } from "preact";
-import habitat from "preact-habitat";
+import Widget from './components/start';
 
-import Widget from "./components/hello-world";
+require('preact-cli/lib/lib/webpack/polyfills');
 
-let _habitat = habitat(Widget);
+const hab = habitat(Widget);
 
-_habitat.render({
-  selector: '[data-widget-host="habitat"]',
-  clean: true
+hab.render({
+    selector: '[data-widget-host="my-preact-habitat"]',
+    clean: true,
 });
