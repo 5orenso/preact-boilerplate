@@ -1,6 +1,5 @@
 # Preact Boilerplate
 [![Build Status](https://travis-ci.org/5orenso/preact-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/preact-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/5orenso/preact-boilerplate/badge.svg)](https://coveralls.io/r/5orenso/preact-boilerplate)
 [![GitHub version](https://badge.fury.io/gh/5orenso%2Fpreact-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fpreact-boilerplate)
 
 ## Yet another Node.js - Preact Boilerplate
