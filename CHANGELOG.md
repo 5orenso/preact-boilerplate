@@ -1,0 +1,6 @@
+* _2019-10-24_: Added install files. (HEAD -> master, origin/master) [Oistein Sorensen] <a href="http://github.com/5orenso/preact-boilerplate/commit/b42f4437201847c25976ce7b318023a9961d488a">view commit</a>
+* _2019-10-24_: Fixed readme. [Oistein Sorensen] <a href="http://github.com/5orenso/preact-boilerplate/commit/68657441d275c900a6aa05d93ed7691de49a9f0a">view commit</a>
+* _2019-10-24_: Added travis yml [Oistein Sorensen] <a href="http://github.com/5orenso/preact-boilerplate/commit/32e73155377973d7b31e5dd4c2e502e3ed2ec666">view commit</a>
+* _2019-10-24_: Added more info. [Oistein Sorensen] <a href="http://github.com/5orenso/preact-boilerplate/commit/b76892df2e281236df888d810b1d19be04ed9b19">view commit</a>
+* _2019-10-24_: Added the first set of files we need for this nice template [Oistein Sorensen] <a href="http://github.com/5orenso/preact-boilerplate/commit/05d8c5c321eec8599438bdd49e90647122894ed8">view commit</a>
+* _2019-10-23_: Initial commit [Oistein Sorensen] <a href="http://github.com/5orenso/preact-boilerplate/commit/6e3781c2c2c76b7881f6d90807c9e4d5a4fde84f">view commit</a>
