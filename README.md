@@ -2,9 +2,9 @@
 [![Build Status](https://travis-ci.org/5orenso/preact-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/preact-boilerplate)
 [![GitHub version](https://badge.fury.io/gh/5orenso%2Fpreact-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fpreact-boilerplate)
 
-## Yet another Node.js - Preact Boilerplate
+## Yet another Preact Boilerplate
 
-This time with a Bootstrap 4, Fontawesome, unit tests, integration tests, code coverage, continuous integration, code analysis, code style and a nice setup flow.
+This time with a Bootstrap 4, Fontawesome, unit tests, integration tests, continuous integration, code analysis, code style and a nice setup flow.
 
 Helper modules in use:
 
@@ -29,11 +29,9 @@ A Javascript code coverage tool written in JS.
 __Travis__
 Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class support for many languages.
 
-__Coveralls.io__
-Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.
-
 __Retire__
 Scanner detecting the use of JavaScript libraries with known vulnerabilities.
+
 
 ## Before you start
 
@@ -45,6 +43,12 @@ $ npm install -g preact-cli
 ```
 
 ## Getting started
+
+1. Create your new widget repo or just create your folder.
+2. Copy the files you need from this repo: `npm run install -- --dir <my-new-widget-dir>`
+
+
+
 
 ## Create a new widget
 

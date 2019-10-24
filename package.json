@@ -15,7 +15,8 @@
     "dev": "preact watch --template src/index.ejs",
     "dist": "microbundle --entry src/components/main/index.js",
     "eslint": "./node_modules/.bin/eslint src/components/**/*.js src/lib/{**/,}/*.js src/*.js",
-    "eslint-watch": "./node_modules/.bin/esw --watch --color --clear src/components/**/*.js src/lib/{**/,}/*.js src/*.js"
+    "eslint-watch": "./node_modules/.bin/esw --watch --color --clear src/components/**/*.js src/lib/{**/,}/*.js src/*.js",
+    "install": "bash ./bin/install.sh"
   },
   "keywords": [],
   "author": "Øistein Sørensen <sorenso@gmail.com",
