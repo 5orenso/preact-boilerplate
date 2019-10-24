@@ -47,7 +47,7 @@ $ npm install -g preact-cli
 1. Create your new widget repo or just create your folder.
 2. Copy the files you need from this repo: 
 ```bash
-$ npm run install -- --dir <my-new-widget-dir>
+$ npm run install-widget -- --dir <my-new-widget-dir>
 ```
 3. Then jump into your new widget dir:
 ```bash

@@ -7,7 +7,7 @@ import Status from '../status';
 import Frontpage from '../frontpage';
 
 /*
-    If this is a widget on a page with more widgets you should probably set this 
+    If this is a widget on a page with more widgets you should probably set this
     to false to prevent confusion.
 */
 const USE_ROUTER = false;
@@ -26,7 +26,6 @@ class Main extends Component {
 
     getMainContent = () => {
         if (USE_ROUTER) {
-            console.log('Using router');
             return (<Router onChange={this.handleRoute} history={createHashHistory()}>
                 {/*
                     This would be a nice place for/more new routes.
@@ -35,10 +34,8 @@ class Main extends Component {
                 */}
                 <Frontpage default />
             </Router>);
-        } else {
-            console.log('Skipping router');
-            return (<Frontpage default />);
         }
+        return (<Frontpage default />);
     }
 
     render() {
