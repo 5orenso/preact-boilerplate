@@ -75,6 +75,40 @@ And if you are an ACE-programmer you also have unit test running live:
 $ npm run test-watch
 ```
 
+## Tips & tricks
+
+#### Router
+
+As the first step in development you have to choose if you are going to us the Router or not.
+This depends if you are developing a widget that are going to be used alone or on a page with
+more widgets. 
+
+__Alone or full page widget:__ Use the Router.
+```javascript
+const USE_ROUTER = true;
+```
+
+__Multiple small widgets:__ Do not use the Router.
+```javascript
+const USE_ROUTER = false;
+```
+
+This setting is located in [src/components/main/index.js](src/components/main/index.js#L13)
+
+
+#### Login
+
+The next step is to decide if you require login or not in your app.
+
+```javascript
+const REQUIRE_LOGIN = false;
+```
+
+This setting is located in [src/components/start/index.js](src/components/start/index.js#L8)
+
+Inside the login component you can find an [example login script](src/components/login/index.js).
+
+
 -----
 
 # General Preact stuff

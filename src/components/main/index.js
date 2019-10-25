@@ -10,7 +10,7 @@ import Frontpage from '../frontpage';
     If this is a widget on a page with more widgets you should probably set this
     to false to prevent confusion.
 */
-const USE_ROUTER = false;
+const USE_ROUTER = true;
 
 const STATE = {
     CURRENT_NAV: 'currentNav',
