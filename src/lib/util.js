@@ -179,6 +179,35 @@ class Utilities {
         return localStorage.removeItem(USER_EMAIL);
     }
 
+    static setObject(objKey, key, val) {
+        const value = localStorage.getItem(objKey);
+        let obj = {};
+        if (typeof key === 'object') {
+            obj = { ...key };
+        } else {
+            if (typeof value === 'string') {
+                obj = JSON.parse(value);
+            }
+            obj[key] = val;
+        }
+        return localStorage.setItem(objKey, JSON.stringify(obj));
+    }
+
+    static unsetObj(objKey, key) {
+        if (typeof key === 'string') {
+            return Utilities.setObject(objKey, key, null);
+        }
+        return localStorage.setItem(objKey, null);
+    }
+
+    static getObject(objKey) {
+        let data = JSON.parse(localStorage.getItem(objKey));
+        if (data === null) {
+            data = {};
+        }
+        return data;
+    }
+
     /**
      *
      * @param endpoint
@@ -199,7 +228,7 @@ class Utilities {
 
         const jwtToken = Utilities.getJwtToken();
         const fetchOpt = {
-            credentials: 'same-origin',
+            credentials: 'omit',
             method: 'GET',
             mode: 'cors',
             cache: 'default',
@@ -233,7 +262,7 @@ class Utilities {
                 PubSub.publish(topics.LOADING_PROGRESS, 100);
             }
 
-            if (response.status >= 299) {
+            if (response.status >= 500) {
                 throw new Error(`${response.status} ${response.statusText}`);
             }
 
@@ -330,6 +359,21 @@ class Utilities {
             capsLock = !shiftKey;
         }
         callback(capsLock);
+    }
+
+    static validateEmail(email) {
+        // eslint-disable-next-line
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    static ucfirst(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    static randomPassword() {
+        const randomstring = Math.random().toString(36).slice(-8);
+        return randomstring;
     }
 }
 

@@ -5,6 +5,9 @@ import Progress from '../progress';
 import Error from '../error';
 import Status from '../status';
 import Frontpage from '../frontpage';
+// Content stores with observable values and attributes.
+import appState from '../../stores/appstate';
+
 
 /*
     If this is a widget on a page with more widgets you should probably set this
@@ -17,6 +20,13 @@ const STATE = {
 };
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.stores = {
+            appState,
+        };
+    }
+
     handleRoute = (event) => {
         const currentNav = event.url.replace(/^\/([^/?]+).*/g, '$1');
         this.setState({
@@ -32,22 +42,22 @@ class Main extends Component {
                     <TagList path='/tag' />
                     <TagEdit path='/tag/:tagId' />
                 */}
-                <Frontpage default />
+                <Frontpage stores={this.stores} default />
             </Router>);
         }
-        return (<Frontpage default />);
+        return (<Frontpage stores={this.stores} default />);
     }
 
     render() {
         return (
             <div class='col-12'>
                 <div class='sticky-top'>
-                    <Progress />
+                    <Progress stores={this.stores} />
                     {/*
                         This would be a nice place to put your navbar.
                     */}
-                    <Error />
-                    <Status />
+                    <Error stores={this.stores} />
+                    <Status stores={this.stores} />
                 </div>
 
                 { this.getMainContent() }
