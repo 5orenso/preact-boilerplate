@@ -50,13 +50,7 @@ class Start extends Component {
     };
 
     render() {
-        return (
-            <div class='container-fluid'>
-                <div class='row'>
-                    { this.getContent() }
-                </div>
-            </div>
-        );
+        return this.getContent();
     }
 }
 

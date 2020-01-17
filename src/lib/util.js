@@ -208,6 +208,18 @@ class Utilities {
         return data;
     }
 
+    static set(key, val) {
+        return localStorage.setItem(key, JSON.stringify(val));
+    }
+
+    static unset(key) {
+        return localStorage.setItem(key, null);
+    }
+
+    static get(key) {
+        return JSON.parse(localStorage.getItem(key));
+    }
+
     /**
      *
      * @param endpoint

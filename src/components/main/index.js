@@ -50,7 +50,7 @@ class Main extends Component {
 
     render() {
         return (
-            <div class='col-12'>
+            <div>
                 <div class='sticky-top'>
                     <Progress stores={this.stores} />
                     {/*

@@ -1,4 +1,4 @@
-import { observable, configure, action, computed } from 'mobx';
+import { observable, configure, action, computed, autorun } from 'mobx';
 import util from '../lib/util';
 
 configure({ enforceActions: 'always' });
@@ -10,7 +10,7 @@ class AppState {
 
     @observable view = {};
 
-    @observable counter = 0;
+    @observable counter = util.get('counter');
 
     @action
     setView(view) {
@@ -26,11 +26,13 @@ class AppState {
     @action
     incCounter() {
         this.counter += 1;
+        util.set('counter', this.counter);
     }
 
     @action
     decCounter() {
         this.counter -= 1;
+        util.set('counter', this.counter);
     }
 
     @computed
@@ -40,4 +42,9 @@ class AppState {
 }
 
 const store = new AppState();
+
+autorun(() => {
+    console.log(store.counter);
+})
+
 export default store;
