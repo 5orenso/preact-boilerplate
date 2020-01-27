@@ -4,9 +4,44 @@
 
 ## Yet another Preact Boilerplate
 
-This time with a Bootstrap 4, Fontawesome, unit tests, integration tests, continuous integration, code analysis, code style and a nice setup flow.
+This time with a MobX, Bootstrap 4, Fontawesome, unit tests, integration tests, continuous integration, code analysis, code style and a nice setup flow.
+
+### Basic layout
+
+The module is bootstrapped via `src/start` which checks for login if required.
+
+Then `src/main` is called. This module loads all MobX stores which handles all states and application data. The main modules also takes care of routing so you are able to deeplink to all application states like a regular webpage.
+
+This is just an example of how this boilerplate is designed and supposed to work:
+
+```
+                         ---------        - - - - -
+                        |  Start  |- - - |  Login  |
+                         ---------        - - - - -
+                             |
+                        -----------      --------
+                       |   main    |    |  MobX  |
+                       | (router)  |----| Stores |
+                        -----------      --------
+                             |
+                             | (path routing)
+             ------------------------------------
+            |                |                   | 
+      -------------    --------------    ----------------
+     |  /index     |  | /products    |  | /products/123  |
+     |  Frontpage  |  | Product list |  | Product detail |
+      -------------    --------------    ----------------
+
+```
+
 
 Helper modules in use:
+
+__MobX__
+MobX is a battle tested library that makes state management simple and scalable by transparently applying functional reactive programming (TFRP). The philosophy behind MobX is very simple:
+
+> Anything that can be derived from the application state, should be derived. Automatically.
+> Which includes the UI, data serialization, server communication, etc.
 
 __Bootstrap 4__
 

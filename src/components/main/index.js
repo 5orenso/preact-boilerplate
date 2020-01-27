@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import Router from 'preact-router';
+import { observer } from 'mobx-preact';
 import { createHashHistory } from 'history';
 import Progress from '../progress';
 import Error from '../error';
@@ -7,7 +8,6 @@ import Status from '../status';
 import Frontpage from '../frontpage';
 // Content stores with observable values and attributes.
 import appState from '../../stores/appstate';
-
 
 /*
     If this is a widget on a page with more widgets you should probably set this
@@ -19,6 +19,7 @@ const STATE = {
     CURRENT_NAV: 'currentNav',
 };
 
+@observer
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -34,7 +35,7 @@ class Main extends Component {
         });
     };
 
-    getMainContent = () => {
+    getMainContent() {
         if (USE_ROUTER) {
             return (<Router onChange={this.handleRoute} history={createHashHistory()}>
                 {/*
