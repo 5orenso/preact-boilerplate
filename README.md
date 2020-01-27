@@ -35,7 +35,7 @@ This is just an example of how this boilerplate is designed and supposed to work
 ```
 
 
-Helper modules in use:
+### Helper modules in use
 
 __MobX__
 MobX is a battle tested library that makes state management simple and scalable by transparently applying functional reactive programming (TFRP). The philosophy behind MobX is very simple:
