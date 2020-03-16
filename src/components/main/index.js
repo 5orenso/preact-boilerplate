@@ -2,10 +2,9 @@ import { h, Component } from 'preact';
 import Router from 'preact-router';
 import { observer } from 'mobx-preact';
 import { createHashHistory } from 'history';
-import Progress from '../progress';
-import Error from '../error';
-import Status from '../status';
+
 import Frontpage from '../frontpage';
+
 // Content stores with observable values and attributes.
 import appState from '../../stores/appstate';
 
@@ -51,18 +50,8 @@ class Main extends Component {
 
     render() {
         return (
-            <div>
-                <div class='sticky-top'>
-                    <Progress stores={this.stores} />
-                    {/*
-                        This would be a nice place to put your navbar.
-                    */}
-                    <Error stores={this.stores} />
-                    <Status stores={this.stores} />
-                </div>
-
+            <div class='container-fluid'>
                 { this.getMainContent() }
-
             </div>
         );
     }
