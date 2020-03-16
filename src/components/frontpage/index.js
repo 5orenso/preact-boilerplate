@@ -1,6 +1,8 @@
 import { h, Component } from 'preact';
 import { observer } from 'mobx-preact';
 
+import util from '../../lib/util';
+
 const initialState = {
     message: 'Hello world',
 };
@@ -10,6 +12,10 @@ class Frontpage extends Component {
     constructor(props) {
         super(props);
         this.state = initialState;
+
+        const { appState } = this.props.stores;
+        const { darkmode } = appState;
+        util.toggleDarkModeClasses(darkmode);
     }
 
     // eslint-disable-next-line
@@ -27,6 +33,10 @@ class Frontpage extends Component {
                         <button type='button' onClick={() => appState.decCounter()}>-</button>
                         Counter: {counter}
                         <button type='button' onClick={() => appState.incCounter()}>+</button>
+
+                        <hr />
+
+                        <button type='button' onClick={() => appState.toggleDarkmode()}>Toggle darkmode</button>
                     </div>
                 </div>
             </div>

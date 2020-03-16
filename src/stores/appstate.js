@@ -10,6 +10,8 @@ class AppState {
 
     @observable view = {};
 
+    @observable darkmode = util.get('darkmode');
+
     @observable counter = util.get('counter');
 
     @action
@@ -38,6 +40,14 @@ class AppState {
     @computed
     get counterTimes2() {
         return this.counter * 2;
+    }
+
+    @action
+    toggleDarkmode() {
+        console.log('toggleDarkmode', this.darkmode);
+        this.darkmode = !this.darkmode;
+        util.set('darkmode', this.darkmode);
+        util.toggleDarkModeClasses(this.darkmode);
     }
 }
 

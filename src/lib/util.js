@@ -387,6 +387,16 @@ class Utilities {
         const randomstring = Math.random().toString(36).slice(-8);
         return randomstring;
     }
+
+    static toggleDarkModeClasses(isEnabled) {
+        if (isEnabled) {
+            document.body.classList.remove('bootstrap');
+            document.body.classList.add('bootstrap-dark');
+        } else {
+            document.body.classList.remove('bootstrap-dark');
+            document.body.classList.add('bootstrap');
+        }
+    }
 }
 
 export default Utilities;
