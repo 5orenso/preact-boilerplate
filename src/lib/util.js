@@ -60,6 +60,20 @@ class Utilities {
         return el;
     }
 
+    static setNestedValue(obj, is, value) {
+        if (typeof is === 'string') {
+            return Utilities.setNestedValue(obj, is.split('.'), value);
+        }
+        if (is.length === 1 && value !== undefined) {
+            // eslint-disable-next-line
+            return obj[is[0]] = value;
+        }
+        if (is.length === 0) {
+            return obj;
+        }
+        return Utilities.setNestedValue(obj[is[0]], is.slice(1), value);
+    }
+
     static padDate(number) {
         let r = String(number);
         if (r.length === 1) {
